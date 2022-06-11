@@ -12,7 +12,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Collections;
 
-
 @Configuration
 @EnableSwagger2
 public class SwaggerConf {
@@ -24,15 +23,14 @@ public class SwaggerConf {
                 .apis(RequestHandlerSelectors.basePackage("com.progra3.petstore"))
                 .paths(PathSelectors.any())
                 .build()
-                .apiInfo(getApiInfo())
-                ;
+                .apiInfo(getApiInfo());
     }
 
     private ApiInfo getApiInfo() {
         return new ApiInfo(
-                "API Pet-Store",
+                "Service Pets",
                 "\n" +
-                        "This API  control pet endpoints",
+                        "This API control of pets-store",
                 "1.0",
                 "No-url",
                 new Contact("Kevin Borge", "No-url", "kborgt@miumg.edu.gt"),

@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import com.progra3.petstore.dtos.PetDto;
 import com.progra3.petstore.entities.Pet;
 import com.progra3.petstore.services.PetService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/pet")
+@Slf4j
 public class PetController {
 	
 	 private PetService service;
@@ -46,7 +48,7 @@ public class PetController {
 
 	//se modifico el return de este metodo a un booleano para poder identificar si la mascota fue elminada o no
 	@DeleteMapping(value = "/{id}")
-	public Boolean deletePet( @PathVariable Integer id) {
+	public Pet deletePet( @PathVariable Integer id) {
 		 return service.deletePet(id);
 	}
 }

@@ -11,6 +11,6 @@ public interface PetService {
 	PetDto findById(Integer id);
 	PetDto createPet(PetDto petDto);
 	PetDto updatePet(Integer id, PetDto petDto);
-	 Boolean deletePet(Integer id);
+	 Pet deletePet(Integer id);
 
 }

@@ -7,8 +7,8 @@ import java.util.Date;
 
 @Data
 public class PetDto implements Serializable {
-    private final Integer idPet;
-    private final String name;
-    private final double price;
-    private final Date birthDay;
+    private  Integer idPet;
+    private String name;
+    private  double price;
+    private Date birthDay;
 }

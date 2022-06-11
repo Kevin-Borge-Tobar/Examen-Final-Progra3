@@ -78,14 +78,13 @@ public class PetServiceImpl  implements  PetService{
     }
 
     @Override
-    public Boolean deletePet(Integer id) {
+    public Pet deletePet(Integer id) {
         Pet pet = petRepository.findById(id).orElse(null);
-        Boolean removed;
         if (pet != null) {
-            return removed = false;
+            petRepository.deleteById(id);
+            return pet;
         }else{
-            petRepository.delete(pet);
-            return removed = true;
+            return null;
         }
     }
 

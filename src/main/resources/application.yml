@@ -16,6 +16,7 @@ datasource:
     showsql: true
 
   #esta anotacion sirve para poder modificar atributos propios dentro de spring como la dependecia swagger
+  #http://localhost:8080/pet-store@/api/swagger-ui.html#
 spring:
   mvc:
     path-match:
