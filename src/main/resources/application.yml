@@ -1,0 +1,22 @@
+# Esta propiedad sirve para cambiar el contexto de inicio de la aplication Web dentro de la pagina principal de la API
+server:
+  servlet:
+    context-path: /pet-store@/api
+
+# Esta anotacion sirve para poder configurar la base de datos dentro del las clases de configuracion
+#Se utliza una base de datos alojada en un servidor de Heroku
+datasource:
+  mysql:
+    url: jdbc:mysql://us-cdbr-east-05.cleardb.net/heroku_e182d18af11663a?reconnect=true
+    username: b7685ff7f973ab
+    password: eed1c10c
+    driverClassName: com.mysql.cj.jdbc.Driver
+  jpa:
+    dialect: org.hibernate.dialect.MySQL8Dialect
+    showsql: true
+
+  #esta anotacion sirve para poder modificar atributos propios dentro de spring como la dependecia swagger
+spring:
+  mvc:
+    path-match:
+      matching-strategy: ant_path_matcher
